@@ -1,37 +1,17 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { useLocation } from 'react-router-dom';
 
 function App() {
-  {/*const location=useLocation();
-  useEffect(() => {
-    const searchParams = new URLSearchParams(location.search);
-    const code = searchParams.get('code');
-    if(code)
-    {
-      console.log(code);
-    }else
-    {
-      console.log("No code found")
-    }
-  }, [location]);*/}
+  const [code,setCode]=useState('');
+  console.log(window.href)
   const handleClick=(event)=>{
-    event.preventDefault();
-    window.location.href='https://api.instagram.com/oauth/authorize?client_id=1379077412944454&redirect_uri=https://insta-basic.vercel.app/&scope=user_profile,user_media&response_type=code'
+    console.log(window.href)
     const searchParams = new URLSearchParams(window.href.search);
     const code = searchParams.get('code');
-    fetch('https://api.instagram.com/oauth/authorize?client_id=1379077412944454&redirect_uri=https://insta-basic.vercel.app/&scope=user_profile,user_media&response_type=code')
-    .then((res)=>{
-      console.log(res)
-    })
-    if(code)
-    {
-      console.log(code);
-    }else
-    {
-      console.log("No code found")
-    }
+    console.log(code)
+    
   }
   return (
     <div className="App">
