@@ -1,3 +1,5 @@
+import {React} from 'react'
+import axios from 'axios'
 {/*import axios from "axios";
 import { useLocation } from "react-router-dom"
 import oauth from "./oauth";
@@ -40,8 +42,6 @@ export default Token
 
 
 
-import {React} from 'react'
-import axios from 'axios'
 
 const Token = () => {
   const handleClick = async () => {
