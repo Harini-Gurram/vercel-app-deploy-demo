@@ -32,7 +32,7 @@ const Token=()=>{
             <button onClick={handleClick}>
                 Get access token
             </button>
-            {accessToken}
+            {authCode}
         </div>
     )
 }
