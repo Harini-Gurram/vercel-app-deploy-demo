@@ -14,7 +14,7 @@ function App() {
     if(codeParam)
     {
       window.alert("Fetched code successfully");
-      navigate("/token"); 
+      navigate("/token"+code); 
     }
     else{
       window.alert("Unable to fetch the code\n Check your User ID and redirect URL once")
