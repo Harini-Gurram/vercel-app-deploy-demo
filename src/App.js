@@ -11,7 +11,7 @@ function App() {
     const searchParams = new URLSearchParams(location.search);
     const codeParam = searchParams.get('code');
     setCode(codeParam);
-    if(code)
+    if(codeParam)
     {
       window.alert("Fetched code successfully");
     }
