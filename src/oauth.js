@@ -22,7 +22,7 @@ function oauth(axios) {
   }
  
   
-  
+export default oauth;  
   
   
   
