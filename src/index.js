@@ -10,7 +10,7 @@ root.render(
   <BrowserRouter>
     
       <Route path="/" element={<App/>}/>
-      <Route path="/token?code" element={<Token/>}/>
+      <Route path="/token" element={<Token/>}/>
  
   </BrowserRouter>
     
