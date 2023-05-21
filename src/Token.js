@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useLocation } from "react-router-dom"
-import oauth from 'axios-oauth-client';
+import oauth from "./oauth";
+//import oauth from 'axios-oauth-client';
 
 const Token=()=>{
     const location = useLocation();
