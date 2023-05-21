@@ -1,6 +1,11 @@
 import {React} from 'react'
 import axios from 'axios'
+import qs from 'qs';
+import { useLocation } from 'react-router-dom';
 const Token = () => {
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const code = searchParams.get('code');
   const handleClick = async () => {
     try {
       const response = await axios.post('http://localhost:3003/exchange-token', 
