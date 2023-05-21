@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useLocation } from "react-router-dom"
+import oauth from 'axios-oauth-client';
 
 const Token=()=>{
     const location = useLocation();
@@ -10,23 +11,24 @@ const Token=()=>{
     const handleClick = async () => {
         try {
           // Make a POST request to the Instagram API to exchange the authorization code for an access token
-          const response = await axios.post('https://api.instagram.com/oauth/access_token', {
-            client_id: '1379077412944454',
-            client_secret: 'd0e3c7c69865b68644e4ec626048db03',
-            grant_type: 'authorization_code',
-            redirect_uri:'https://insta-basic.vercel.app/',
-            code: code,
-          });
-    
+          const response = oauth.authorizationCode(
+            axios.create(),
+            'https://api.instagram.com/oauth/access_token',
+            '1379077412944454',
+            'd0e3c7c69865b68644e4ec626048db03',
+            'authorization_code',
+            'https://insta-basic.vercel.app/',
+             code
+          );
+          const authCode=await response('AUTHORIZATION CODE')
+          console.log(authCode);
           // Extract the access token from the response
-          console.log(JSON.stringify(response))
-          const { access_token } = response.data;
-          setAccessToken(access_token);
-        } catch (error) {
-          console.error('Error fetching access token:', error);
         }
-      };
-    
+        catch(error)
+        {
+            
+        }
+    }
     return(
         <div>
             <button onClick={handleClick}>
