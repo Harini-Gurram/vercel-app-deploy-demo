@@ -12,6 +12,7 @@ function App() {
     const codeParam = searchParams.get('code');
     setCode(codeParam);
   }, [location.search]);
+  console.log(code)
   return (
     <div className="App">
       <div>
