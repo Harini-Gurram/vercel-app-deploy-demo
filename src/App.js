@@ -12,6 +12,13 @@ function App() {
     const codeParam = searchParams.get('code');
     setCode(codeParam);
   }, [location.search]);
+  if(code)
+  {
+    window.alert("Fetched code successfully");
+  }
+  else{
+    window.alert("Unable to fetch the code\n Check your User ID and redirect URL once")
+  }
   console.log(code)
   return (
     <div className="App">
