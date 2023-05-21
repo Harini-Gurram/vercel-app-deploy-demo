@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useState } from "react";
 import { useLocation } from "react-router-dom"
 import oauth from 'axios-oauth-client';
 
@@ -7,7 +6,6 @@ const Token=()=>{
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const code = searchParams.get('code');
-    const [accessToken,setAccessToken]=useState('');
     const handleClick = async () => {
         try {
           // Make a POST request to the Instagram API to exchange the authorization code for an access token
@@ -26,7 +24,7 @@ const Token=()=>{
         }
         catch(error)
         {
-            
+
         }
     }
     return(
