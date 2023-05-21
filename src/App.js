@@ -4,6 +4,7 @@ import './App.css';
 import { useLocation} from 'react-router-dom';
 
 function App() {
+  const handleClick=()=>{
   const location = useLocation();
   const [code, setCode] = useState(null);
 
@@ -21,11 +22,12 @@ function App() {
   }, [location.search]);
   
   console.log(code)
+}
   return (
     <div className="App">
       <div>
         <h1>Follow the below steps to fetch feed</h1>
-        <button>Get code</button>
+        <button onClick={handleClick}>Get code</button>
       </div>
     </div>
   );
