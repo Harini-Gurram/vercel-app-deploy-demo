@@ -1,9 +1,12 @@
-// Express.js example
 const express = require('express');
+const cors=require('cors');
+
 const axios = require('axios');
 const qs = require('qs');
 
 const app = express();
+app.use(cors()); // Enable CORS for all routes
+app.use(express.json());
 
 app.post('/exchange-token', async (req, res) => {
   try {

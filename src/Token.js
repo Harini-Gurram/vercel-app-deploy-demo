@@ -3,8 +3,18 @@ import axios from 'axios'
 const Token = () => {
   const handleClick = async () => {
     try {
-      const response = await axios.post('http://localhost:3003/exchange-token', {
-        code: 'YOUR_AUTHORIZATION_CODE',
+      const response = await axios.post('http://localhost:3003/exchange-token', 
+      qs.stringify({
+        client_id: "1379077412944454",
+          client_secret: "d0e3c7c69865b68644e4ec626048db03",
+          grant_type: "authorization_code",
+          redirect_uri: "https://insta-basic.vercel.app/",
+          code: code
+      }),
+      {
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
       });
 
       console.log(response.data.access_token);
