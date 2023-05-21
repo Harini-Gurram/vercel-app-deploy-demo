@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import './App.css';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useLocation} from 'react-router-dom';
 
 function App() {
   const location = useLocation();
