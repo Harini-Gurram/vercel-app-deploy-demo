@@ -4,11 +4,10 @@ import './App.css';
 import { useLocation} from 'react-router-dom';
 
 function App() {
-  const handleClick=()=>{
   const location = useLocation();
   const [code, setCode] = useState(null);
 
-  useEffect(() => {
+  const handleClick=() => {
     const searchParams = new URLSearchParams(location.search);
     const codeParam = searchParams.get('code');
     setCode(codeParam);
@@ -19,10 +18,10 @@ function App() {
     else{
       window.alert("Unable to fetch the code\n Check your User ID and redirect URL once")
     }
-  }, [location.search]);
+  };
   
   console.log(code)
-}
+
   return (
     <div className="App">
       <div>
