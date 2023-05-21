@@ -19,6 +19,7 @@ const Token=()=>{
           });
     
           // Extract the access token from the response
+          console.log(JSON.stringify(response))
           const { access_token } = response.data;
           setAccessToken(access_token);
         } catch (error) {
