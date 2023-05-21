@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <div>
         <h1>Follow the below steps to fetch feed</h1>
-        <button onClick={handleClick}>Get code</button>
+        <button>Get code</button>
       </div>
     </div>
   );
