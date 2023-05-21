@@ -1,8 +1,10 @@
-import { useParams } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 
 const Token=()=>{
-    const {code}=useParams();
-    console.log(code)
+    const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const code = searchParams.get('code');
+  console.log(code);
     return(
         <div>
             <button>
