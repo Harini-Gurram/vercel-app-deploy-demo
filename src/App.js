@@ -4,8 +4,14 @@ import './App.css';
 import { useLocation, useSearchParams } from 'react-router-dom';
 
 function App() {
-  let code = (new URLSearchParams(window.location.search)).get("code")
-  console.log(code)
+  const location = useLocation();
+  const [code, setCode] = useState(null);
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const codeParam = searchParams.get('code');
+    setCode(codeParam);
+  }, [location.search]);
   return (
     <div className="App">
       <div>
