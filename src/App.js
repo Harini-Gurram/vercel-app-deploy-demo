@@ -1,12 +1,12 @@
 
 import {useState } from 'react';
 import './App.css';
-import { useLocation} from 'react-router-dom';
+import { useLocation, useNavigate} from 'react-router-dom';
 
 function App() {
   const location = useLocation();
   const [code, setCode] = useState(null);
-
+  const navigate=useNavigate();
   const handleClick=() => {
     const searchParams = new URLSearchParams(location.search);
     const codeParam = searchParams.get('code');
@@ -14,6 +14,7 @@ function App() {
     if(codeParam)
     {
       window.alert("Fetched code successfully");
+      navigate("/token"); 
     }
     else{
       window.alert("Unable to fetch the code\n Check your User ID and redirect URL once")
