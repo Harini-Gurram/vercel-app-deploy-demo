@@ -10,10 +10,6 @@ const Token = () => {
     try {
       const response = await axios.post('http://localhost:3003/exchange-token', 
       qs.stringify({
-        client_id: "1379077412944454",
-          client_secret: "d0e3c7c69865b68644e4ec626048db03",
-          grant_type: "authorization_code",
-          redirect_uri: "https://insta-basic.vercel.app/",
           code: code
       }),
       {
