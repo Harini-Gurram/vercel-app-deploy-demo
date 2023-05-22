@@ -21,7 +21,7 @@ function App() {
     }
   };
   
-  console.log(code)
+  
 
   return (
     <div className="App">

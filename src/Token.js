@@ -6,10 +6,10 @@ const Token = () => {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const codepara = searchParams.get('code');
-    console.log(codepara)
+    console.log(codepara+" before click")
     const handleClick = async () => {
     try {
-        console.log(codepara)
+        console.log(codepara+"in click")
         const response = await axios({
             method: 'post',
             url: 'https://api.instagram.com/oauth/access_token', 
@@ -22,7 +22,7 @@ const Token = () => {
             },
           
       })
-      console.log(codepara)
+      console.log(codepara+"after click")
       console.log(response.data.access_token);
     } catch (error) {
       console.error('Error fetching access token:', error);
