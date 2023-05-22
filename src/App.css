@@ -2,14 +2,14 @@
   text-align: center;
 }
 .button{
-  background-color: #008CBA;
+  background-color: #88daf5;
   font-size: 12px;
   padding: 10px 24px;
   border-radius: 8px;
 
 }
 .button:hover {
-  background-color: #008CBA;/* Green */
+  background-color: #cde8f1;/* Green */
   color: white;
 }
 .App-logo {

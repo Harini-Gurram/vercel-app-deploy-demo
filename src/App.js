@@ -24,10 +24,13 @@ function App() {
       <div>
         <h1>Follow the below steps to fetch feed from the instagram</h1>
         <div className='buttons'>
+          <h3>1. Clicke here to get the code from API</h3>
         <button class='button' onClick={handleClick}>Get code</button>
         <br/>
+        <h3>1. Clicke here to get the token from API</h3>
         <button class='button'>Get Token</button>
         <br/>
+        <h3>1. Clicke here to get feed</h3>
         <button class='button'>Get Feed</button>
         </div>
       </div>
