@@ -8,7 +8,7 @@ const Token = () => {
     const codepara = searchParams.get('code');
     const handleClick = async () => {
     try {
-      const response = await axios.post('http://localhost:3003/exchange-token', 
+      const response = await axios.post('http://localhost:8000/exchange-token', 
       qs.stringify({code: codepara}),
       {
         headers: {
