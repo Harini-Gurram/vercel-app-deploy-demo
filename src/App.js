@@ -23,11 +23,13 @@ function App() {
     <div className="App">
       <div>
         <h1>Follow the below steps to fetch feed from the instagram</h1>
-        <button onClick={handleClick}>Get code</button>
+        <div className='buttons'>
+        <button class='button' onClick={handleClick}>Get code</button>
         <br/>
-        <button>Get Token</button>
+        <button class='button'>Get Token</button>
         <br/>
-        <button>Get Feed</button>
+        <button class='button'>Get Feed</button>
+        </div>
       </div>
     </div>
   );
