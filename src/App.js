@@ -9,7 +9,6 @@ function App() {
   const handleClick=() => {
     const searchParams = new URLSearchParams(location.search);
     const codeParam = searchParams.get('code');
-    setCode(codeParam);
     if(codeParam)
     {
       window.alert("Fetched code successfully");
