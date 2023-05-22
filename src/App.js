@@ -5,7 +5,6 @@ import { useLocation, useNavigate} from 'react-router-dom';
 
 function App() {
   const location = useLocation();
-  const [code, setCode] = useState(null);
   const navigate=useNavigate();
   const handleClick=() => {
     const searchParams = new URLSearchParams(location.search);
