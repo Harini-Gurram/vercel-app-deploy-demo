@@ -6,11 +6,11 @@
   font-size: 12px;
   padding: 10px 24px;
   border-radius: 8px;
-  border-color:1581e6;
+  border-color:#1581e6;
 
 }
 .button:hover {
-  background-color: #4fff27;/* Green */
+  background-color: #4fff27;
   border-color: #4fff27;
   color: white;
 }
