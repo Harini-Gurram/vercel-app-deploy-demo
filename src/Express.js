@@ -11,6 +11,7 @@ app.use(express.json());
 app.post('/exchange-token', async (req, res) => {
   try {
     const { code } = req.body;
+    console.log(code)
     const response = await axios({
       method: 'post',
       url: 'https://api.instagram.com/oauth/access_token',

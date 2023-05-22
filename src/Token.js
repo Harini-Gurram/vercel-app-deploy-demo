@@ -5,13 +5,11 @@ import { useLocation } from 'react-router-dom';
 const Token = () => {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
-    const code = searchParams.get('code');
-  const handleClick = async () => {
+    const codepara = searchParams.get('code');
+    const handleClick = async () => {
     try {
       const response = await axios.post('http://localhost:3003/exchange-token', 
-      qs.stringify({
-          code: code
-      }),
+      qs.stringify({code: codepara}),
       {
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
