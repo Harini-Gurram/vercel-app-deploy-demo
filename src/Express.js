@@ -5,15 +5,14 @@ const axios = require('axios');
 const qs = require('qs');
 
 const app = express();
-app.use(cors()); // Enable CORS for all routes
+app.use(cors()); 
 app.use(express.json());
 app.get('/', (req, res) => {
-    res.send('Hello, World!'); // Replace with your desired response
+    res.send('Hello, World!'); 
   });
 app.post('/exchange-token', async (req, res) => {
   try {
     const { code } = req.body;
-    res.send(code)
     const response = await axios({
       method: 'post',
       url: 'https://api.instagram.com/oauth/access_token',
