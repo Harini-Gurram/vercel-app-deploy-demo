@@ -10,8 +10,6 @@ const Token = () => {
     console.log(codepara)
     const handleClick = async () => {
     try {
-        console.log("in click")
-        console.log(codepara)
         const response = await axios({
             method: 'post',
             url: 'https://api.instagram.com/oauth/access_token', 
