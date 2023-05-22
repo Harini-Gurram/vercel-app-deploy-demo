@@ -6,10 +6,12 @@
   font-size: 12px;
   padding: 10px 24px;
   border-radius: 8px;
+  border-color: #88daf5;
 
 }
 .button:hover {
   background-color: #4fff27;/* Green */
+  border-color: #4fff27;
   color: white;
 }
 .App-logo {
