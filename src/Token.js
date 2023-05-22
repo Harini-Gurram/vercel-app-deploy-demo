@@ -8,7 +8,6 @@ const Token = () => {
     const codepara = searchParams.get('code');
     console.log(codepara)
     const handleClick = async () => {
-        console.log(codepara)
     try {
       const response = await axios.post('http://localhost:8000/exchange-token', 
       qs.stringify({code: codepara}),
@@ -17,7 +16,7 @@ const Token = () => {
             "Content-Type": "application/x-www-form-urlencoded",
           },
       });
-      
+      console.log(codepara)
       console.log(response.data.access_token);
       // You can store the access_token in state or perform any other required action with it
     } catch (error) {
