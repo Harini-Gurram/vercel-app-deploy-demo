@@ -7,7 +7,9 @@ const qs = require('qs');
 const app = express();
 app.use(cors()); // Enable CORS for all routes
 app.use(express.json());
-
+app.get('/', (req, res) => {
+    res.send('Hello, World!'); // Replace with your desired response
+  });
 app.post('/exchange-token', async (req, res) => {
   try {
     const { code } = req.body;
