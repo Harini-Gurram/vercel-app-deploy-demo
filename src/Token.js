@@ -1,6 +1,6 @@
 import {React} from 'react'
 import axios from 'axios'
-import qs from 'qs';
+//import qs from 'qs';
 import { useLocation } from 'react-router-dom';
 const Token = () => {
     const location = useLocation();
