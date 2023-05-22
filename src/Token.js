@@ -9,10 +9,11 @@ const Token = () => {
     console.log(codepara)
     const handleClick = async () => {
     try {
+        console.log(codepara)
         const response = await axios({
             method: 'post',
-            url: 'https://api.instagram.com/oauth/access_token', // Base URL
-            params: { // Query parameters
+            url: 'https://api.instagram.com/oauth/access_token', 
+            params: { 
               client_id: '1379077412944454',
               client_secret: 'd0e3c7c69865b68644e4ec626048db03',
               grant_type: 'authorization_code',
