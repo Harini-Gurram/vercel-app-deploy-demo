@@ -27,10 +27,10 @@ function App() {
           <h3>1. Clicke here to get the code from API</h3>
         <button class='button' onClick={handleClick}>Get code</button>
         <br/>
-        <h3>1. Clicke here to get the token from API</h3>
+        <h3>2. Clicke here to get the token from API</h3>
         <button class='button'>Get Token</button>
         <br/>
-        <h3>1. Clicke here to get feed</h3>
+        <h3>3. Clicke here to get feed</h3>
         <button class='button'>Get Feed</button>
         </div>
       </div>
