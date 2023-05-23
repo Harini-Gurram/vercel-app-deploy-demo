@@ -5,13 +5,13 @@
     padding: 15px;
   }
   
-  .container img {
+.container img {
     width: 100%;
     height: auto;
     display: block;
     transition: all 100ms ease-out;
   }
   
-  .container img:hover {
+.container img:hover {
     transform: scale(1.04);
   }
