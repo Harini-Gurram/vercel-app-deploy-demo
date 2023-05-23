@@ -13,7 +13,7 @@ const Token = () => {
         formdata.append("client_id",1379077412944454);
         formdata.append("client_secret",'d0e3c7c69865b68644e4ec626048db03');
         formdata.append("grant_type","authorization_code")
-        formdata.append("redirect_uri",'https://insta-basic.vercel.app/');
+        formdata.append("redirect_uri",'https://insta-basic.vercel.app');
         formdata.append("code",codepara);
         const requestOptions={
           method: 'POST',
