@@ -13,7 +13,7 @@ const Token = () => {
     console.log(codepara)
     const handleClick = async () => {
     try {
-      const {data} = await instaBaseURL.post('oauth/access_token', {
+      const {data} = await instaBaseURL.post('/oauth/access_token', {
         client_id:1379077412944454,
         client_secret:'d0e3c7c69865b68644e4ec626048db03',
         grant_type:"authorization_code",
