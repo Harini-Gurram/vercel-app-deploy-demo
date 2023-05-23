@@ -2,7 +2,7 @@ import Axios from 'axios';
 import {React} from 'react'
 import { useLocation } from 'react-router-dom';
 const instaBaseURL = Axios.create({
-  baseURL:'https//api.instagram.com/'
+  baseURL:'https://api.instagram.com'
 });
 
 const Token = () => {
