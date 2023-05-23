@@ -1,4 +1,4 @@
-import axios, { Axios } from 'axios';
+import Axios from 'axios';
 import {React} from 'react'
 import { useLocation } from 'react-router-dom';
 const instaBaseURL = Axios.create({
