@@ -8,7 +8,8 @@ const FeedHome=()=>{
     const access_tok = searchParams.get('access_token');
     const handleClick = async () => {
         try {
-          const {data}=axios.get(`https://graph.instagram.com/${id}?fields=id,username&access_token=${access_tok}`)
+          const {data}= axios
+          .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=12&access_token=${access_tok}`)
          if(data)
          {
             console.log(data.id)
