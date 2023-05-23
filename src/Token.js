@@ -26,12 +26,12 @@ const Token = () => {
         }
       }
     )
+    console.log(data.access_token)
     if(data)
     {
       window.alert("Got the access token");
       navigate(`/feed?access_token=${data.access_token}`)
     }
-    console.log(data.accesstoken)
       
     } catch (error) {
       console.error('Error fetching access token:', error);
