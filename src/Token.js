@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {React} from 'react'
 import { useLocation } from 'react-router-dom';
 const Token = () => {
@@ -18,7 +19,7 @@ const Token = () => {
           body: formdata,
           redirect: 'follow'
         }
-        axios.post('https//api.instagram.com/oauth/access_token', formdata, config)
+        axios.post('https//api.instagram.com/oauth/access_token', formdata, requestOptions)
         .then(response => {
             console.log(response);
         })
