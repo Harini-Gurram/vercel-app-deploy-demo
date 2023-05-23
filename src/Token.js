@@ -24,7 +24,6 @@ const Token = () => {
           
       
       console.log(codepara+"after click")
-      console.log(response.data.access_token);
     } catch (error) {
       console.error('Error fetching access token:', error);
     }
