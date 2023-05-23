@@ -23,7 +23,7 @@ const FeedHome=()=>{
     return(
         <div>
           <button onClick={handleClick}>Get feed</button>
-          <div>
+          <div className="container">
             {feeds.map((feed) => (
                 <Feed key={feed.id} feed={feed} />
             ))}
