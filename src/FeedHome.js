@@ -19,7 +19,10 @@ const FeedHome=()=>{
             }
           }
         )
-          
+         if(data)
+         {
+            console.log(data.id)
+         } 
         } catch (error) {
           console.error('Error fetching access token:', error);
         }
