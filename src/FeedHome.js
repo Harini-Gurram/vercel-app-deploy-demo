@@ -21,6 +21,7 @@ const FeedHome=()=>{
             setFeedsData(resp.data.data)
             nav(`/instaFeed?feeds=${encodeURIComponent(JSON.stringify(resp.data.data))}`);
             console.log(feeds.id)
+            console.log("get feeds")
         })
         
         } catch (error) {
