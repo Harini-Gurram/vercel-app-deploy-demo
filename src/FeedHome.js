@@ -1,10 +1,10 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import {React, useState} from 'react'
 import './App.css'
-import Feed from "./Feed";
 const FeedHome=()=>{
     const [feeds,setFeedsData]=useState([]);
+    const nav=useNavigate();
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const access_tok = searchParams.get('access_token');
@@ -19,8 +19,8 @@ const FeedHome=()=>{
           axios.get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=12&access_token=${access_tok}`)
           .then((resp) => {
             setFeedsData(resp.data.data)
+            nav(`/instaFeed?feeds=${encodeURIComponent(JSON.stringify(feeds))}`);
             console.log(feeds.id)
-            console.log("get feeds")
         })
         
         } catch (error) {
@@ -37,11 +37,6 @@ const FeedHome=()=>{
                         <p className='para'>Once you receive a code, exchange it for a short-lived access token by sending a POST request to the API endpoint</p>
                         <button className='button' onClick={handleClick}>Get Feed</button>
                         <button className='button' onClick={handleRedirect}>More info</button>
-                        <div className="fcontainer">
-                        {feeds.map((feed) => (
-                                <Feed key={feed.id} feed={feed} />
-                                 ))}
-                        </div>
                     </div>
                 </div>
             </div>
