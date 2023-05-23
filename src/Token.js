@@ -19,7 +19,7 @@ const Token = () => {
           body: formdata,
           redirect: 'follow'
         }
-        const response = await fetch("https://api.instagram.com/oauth/access_token?client_id=${clientID}&client_secret=${clientSecret}&grant_type=authorization_code&redirect_uri=${redirectURI}&code=${codepara}", requestOptions);
+        const response = await fetch(`https://api.instagram.com/oauth/access_token?client_id=${clientID}&client_secret=${clientSecret}&grant_type=authorization_code&redirect_uri=${redirectURI}&code=${codepara}`, requestOptions);
         const data = await response.json();
         console.log(data.access_token);
         console.log(codepara + " after click");
