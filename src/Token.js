@@ -14,18 +14,15 @@ const Token = () => {
         const clientSecret = 'd0e3c7c69865b68644e4ec626048db03';
         const redirectURI = 'https://insta-basic.vercel.app/';
 
-        var requestOptions={
-           method: 'POST',
+        const requestOptions={
+          method: 'POST',
           body: formdata,
           redirect: 'follow'
         }
-        fetch(`https://api.instagram.com/oauth/access_token?client_id=${clientID}&client_secret=${clientSecret}&grant_type=authorization_code&redirect_uri=${redirectURI}&code=${codepara}`, requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
-          
-      
-      console.log(codepara+"after click")
+        const response = await fetch("https://api.instagram.com/oauth/access_token", requestOptions);
+        const data = await response.json();
+        console.log(data.access_token);
+        console.log(codepara + " after click");
     } catch (error) {
       console.error('Error fetching access token:', error);
     }
