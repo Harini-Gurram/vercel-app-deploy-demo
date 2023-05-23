@@ -10,7 +10,7 @@ const FeedHome=()=>{
     const access_tok = searchParams.get('access_token');
     const handleClick = async () => {
         try {
-          const {data} = await instaBaseURL.post('com/me/media', {
+          const {data} = await instaBaseURL.get('com/me/media?', {
             fields:'id,media_type,media_url,username,timestamp',
             access_token:access_tok,
           }, {
