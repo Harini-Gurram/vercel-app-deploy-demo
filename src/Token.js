@@ -9,24 +9,21 @@ const Token = () => {
     console.log(codepara)
     const handleClick = async () => {
     try {
-        const formdata=new FormData();
-        formdata.append("client_id",1379077412944454);
-        formdata.append("client_secret",'d0e3c7c69865b68644e4ec626048db03');
-        formdata.append("grant_type","authorization_code")
-        formdata.append("redirect_uri",'https://insta-basic.vercel.app');
-        formdata.append("code",codepara);
-        const requestOptions={
-          method: 'POST',
-          body: formdata,
-          redirect: 'follow'
+      const {data} = await axios.post('https//api.instagram.com/oauth/access_token', {
+        client_id:1379077412944454,
+        client_secret:'d0e3c7c69865b68644e4ec626048db03',
+        grant_type:"authorization_code",
+        redirect_uri:'https://insta-basic.vercel.app',
+        code:codepara
+      }, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
         }
-        axios.post('https//api.instagram.com/oauth/access_token', formdata, requestOptions)
-        .then(response => {
-            console.log(response);
-        })
-        .catch(error => {
-          console.log(error);
-        });
+      }
+    )
+    console.log(data)
+        
+       
     } catch (error) {
       console.error('Error fetching access token:', error);
     }
