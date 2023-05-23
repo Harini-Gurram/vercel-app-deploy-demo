@@ -53,7 +53,7 @@ const Token = () => {
         <div className='show'>
             <p className='heady'>Step 2:Exchange the code for a token</p>
             <p className='para'>Once you receive a code, exchange it for a short-lived access token by sending a POST request to the API endpoint</p>
-            <button className='button' onClick={handleClick}>Fetch code</button>
+            <button className='button' onClick={handleClick}>Get access token</button>
             <button className='button' onClick={handleRedirect}>More info</button>
           </div>
         </div>
