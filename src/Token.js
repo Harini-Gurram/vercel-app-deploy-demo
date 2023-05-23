@@ -37,7 +37,7 @@ const Token = () => {
     if(data)
     {
       window.alert("Got the access token");
-      navigate(`/feed?access_token=${data.access_token}`)
+      navigate(`/feed?feeds=${data.access_token}`)
     }
       
     } catch (error) {
