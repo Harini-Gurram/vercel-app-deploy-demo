@@ -4,7 +4,6 @@ import {React} from 'react'
 const FeedHome=()=>{
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
-    const id="9716595748354275";
     const access_tok = searchParams.get('access_token');
     const handleClick = async () => {
         try {
