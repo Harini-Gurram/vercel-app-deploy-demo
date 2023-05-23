@@ -54,6 +54,8 @@
   display:inline-flex;
   gap: 5rem;
   justify-content: center;
+  height:90%;
+  width:90%;
 }
 .button {
   height:40px;
