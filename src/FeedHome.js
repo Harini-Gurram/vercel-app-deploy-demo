@@ -1,24 +1,14 @@
 import { useLocation } from "react-router-dom";
-import Axios from 'axios';
+import axios from 'axios';
 import {React} from 'react'
-const instaBaseURL = Axios.create({
-    baseURL:'https://graph.instagram.com'
-  });
 const FeedHome=()=>{
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
+    const id="9716595748354275";
     const access_tok = searchParams.get('access_token');
     const handleClick = async () => {
         try {
-          const {data} = await instaBaseURL.get('com/me/media?', {
-            fields:'id,media_type,media_url,username,timestamp',
-            access_token:access_tok,
-          }, {
-            headers: {
-              'Content-Type': 'multipart/form-data'
-            }
-          }
-        )
+          const {data}=axios.get(`https://graph.instagram.com/${id}?fields=id,username&access_token=${access_tok}`)
          if(data)
          {
             console.log(data.id)
