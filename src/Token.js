@@ -1,12 +1,13 @@
 import Axios from 'axios';
 import {React} from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 const instaBaseURL = Axios.create({
   baseURL:'https://api.instagram.com'
 });
 
 const Token = () => {
     const location = useLocation();
+    const navigate=useNavigate();
     const searchParams = new URLSearchParams(location.search);
     const codepara = searchParams.get('code');
     console.log("before click");
@@ -25,9 +26,13 @@ const Token = () => {
         }
       }
     )
-    console.log(data)
-        
-       
+    if(data)
+    {
+      window.alert("Got the access token");
+      navigate(`/feed?access_token=${data.access_token}`)
+    }
+    console.log(data.accesstoken)
+      
     } catch (error) {
       console.error('Error fetching access token:', error);
     }

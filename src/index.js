@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Token from './Token';
+import FeedHome from './FeedHome';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,6 +12,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App/>}/>
       <Route path="/token" element={<Token/>}/>
+      <Route path="/feed" element={<FeedHome/>}/>
     </Routes>
   </BrowserRouter>
     
