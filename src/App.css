@@ -1,50 +1,71 @@
 .App {
-  text-align: center;
-}
-.button{
-  background-color: #1581e6;
-  font-size: 12px;
-  padding: 10px 24px;
-  border-radius: 8px;
-  border-color:#1581e6;
-
-}
-.button:hover {
-  background-color: #4fff27;
-  border-color: #4fff27;
-  color: white;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display:flex;
+  flex-direction: row;
+  background: linear-gradient(135deg,#feda75,#fa7e1e, #d62976,#c988e3,#9ba3ff);
+  background-attachment: fixed;
+  height: 100vh;
+  display:flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.header{
+  font-family: 'Charm', cursive;
+  font-size: 50px;
+  margin-bottom: 20px;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  height: 90%;
+  width:90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+}
+.header .show .heady{
+  font-family:'Charm', cursive;
+  font-size: 30px;
+  background-color:rgba(255, 255,250, 0.5) ;
+  border-radius: 10px;
+}
+.header .show{
+  background-color: rgba(255, 255,245, 0.5);
+  border-radius: 10px;
+}
+.header .show .para{
+  font-family:'Bad Script', cursive;;
+  font-size:20px ;
+  align-items: center;
+  margin-bottom:0.1rem;
+}
+.show .buttons-container{
+  padding-left:30%;
+  padding-right:30%;
+  padding-top: 0%;
+  display:inline-flex;
+  gap: 5rem;
+  justify-content: center;
+}
+.button {
+  height:40px;
+  width:150px;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-family: inherit;
+  font-size: 20px;
+  background-image: linear-gradient(135deg,#4f5bd5, #c88ae0,#ee71a9,#ff923f,#fed070);
+  /* Added margin-top to create space between header and buttons */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button:hover {
+  background-image: linear-gradient(135deg,#feda75,#fa7e1e, #d62976,#962fbf,#4f5bd5);
+  transition: background-image 0.3s ease;
+  cursor: pointer;
 }

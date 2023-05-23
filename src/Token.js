@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import {React} from 'react'
+import './App.css'
 import { useLocation, useNavigate } from 'react-router-dom';
 const instaBaseURL = Axios.create({
   baseURL:'https://api.instagram.com'
@@ -12,6 +13,12 @@ const Token = () => {
     const codepara = searchParams.get('code');
     console.log("before click");
     console.log(codepara)
+    const handleRedirect=()=>{
+      if(window.confirm("You will be redirected to external link"))
+      {
+        window.location.href="https://developers.facebook.com/docs/instagram-basic-display-api/guides/getting-access-tokens-and-permissions"
+      }
+    }
     const handleClick = async () => {
     try {
       const {data} = await instaBaseURL.post('/oauth/access_token', {
@@ -39,9 +46,20 @@ const Token = () => {
   };
 
   return (
-    <div>
-      <button onClick={handleClick}>Get access token</button>
-    </div>
+    <div className="App">
+      <div className="container">
+        <div className='header'>
+        <p>Instagram basic display API</p>
+        <div className='show'>
+            <p className='heady'>Step 2:Exchange the code for a token</p>
+            <p className='para'>Once you receive a code, exchange it for a short-lived access token by sending a POST request to the API endpoint</p>
+            <button className='button' onClick={handleClick}>Fetch code</button>
+            <button className='button' onClick={handleRedirect}>More info</button>
+          </div>
+        </div>
+        </div>
+        </div>
+      
   );
 };
 
