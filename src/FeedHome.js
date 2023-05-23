@@ -37,10 +37,12 @@ const FeedHome=()=>{
                         <p className='para'>Once you receive a code, exchange it for a short-lived access token by sending a POST request to the API endpoint</p>
                         <button className='button' onClick={handleClick}>Get Feed</button>
                         <button className='button' onClick={handleRedirect}>More info</button>
+                        <div className="feed">
                         <div className="fcontainer">
             {feeds.map((feed) => (
                 <Feed key={feed.id} feed={feed} />
             ))}
+        </div>
         </div>
                     </div>
                 </div>
