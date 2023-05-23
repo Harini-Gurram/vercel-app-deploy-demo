@@ -1,6 +1,5 @@
 import { useLocation } from "react-router-dom";
 import Feed from "./Feed"
-import Feed from "./Feed";
 import './FeedHome.css'
 const InstaFeed=()=>{
     const location = useLocation();
