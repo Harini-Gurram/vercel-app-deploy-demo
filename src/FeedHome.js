@@ -19,7 +19,8 @@ const FeedHome=()=>{
           axios.get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=12&access_token=${access_tok}`)
           .then((resp) => {
             setFeedsData(resp.data.data)
-            nav(`/instaFeed?feed=${feeds}`)
+            nav(`/instaFeed?feeds=${feeds}`)
+            console.log(feeds.id)
         })
         
         } catch (error) {
