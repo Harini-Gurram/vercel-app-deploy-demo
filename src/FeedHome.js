@@ -29,9 +29,10 @@ const FeedHome=()=>{
       };
         
     return(
-        <div className="App">
-             <div className="container">
+        <div className="feedApp">
+             <div className="feedcontainer">
                 <div className='header'>
+                <p>Instagram basic display API</p>
                     <div className='show'>
                         <p className='heady'>Step 3:Get User's profile and user media</p>
                         <p className='para'>Once you receive a code, exchange it for a short-lived access token by sending a POST request to the API endpoint</p>

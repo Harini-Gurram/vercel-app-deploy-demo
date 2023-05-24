@@ -46,6 +46,7 @@
   font-size:20px ;
   align-items: center;
   margin-bottom:0.1rem;
+  padding-left:10px;
 }
 .show .buttons-container{
   padding-left:30%;

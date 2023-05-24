@@ -1,4 +1,4 @@
-.Appf{
+.feedApp{
         display:flex;
         flex-direction: row;
         background: linear-gradient(135deg,#feda75,#fa7e1e, #d62976,#c988e3,#9ba3ff);
@@ -10,6 +10,17 @@
         align-items: center;
         height:100%;
         width:100%;
+}
+.feedcontainer {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  height: 90%;
+  width:90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
 }
 .fcontainer {
     display: grid;
