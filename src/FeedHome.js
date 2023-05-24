@@ -36,8 +36,10 @@ const FeedHome=()=>{
                     <div className='show'>
                         <p className='heady'>Step 3:Get User's profile and user media</p>
                         <p className='para'>Once you receive a code, exchange it for a short-lived access token by sending a POST request to the API endpoint</p>
+                        <div className='buttons-container'>
                         <button className='button' onClick={handleClick}>Get Feed</button>
                         <button className='button' onClick={handleRedirect}>More info</button>
+                        </div>
                         <div className="feed">
                         <div className="fcontainer">
             {feeds.map((feed) => (
