@@ -29,8 +29,11 @@ const Token = () => {
         code:codepara
       }, {
         headers: {
-          'Content-Type': 'multipart/form-data'
-        }
+          'Content-Type': 'multipart/form-data',
+          withCredentials: false,
+        },
+        
+        
       }
     )
     console.log(data.access_token)
