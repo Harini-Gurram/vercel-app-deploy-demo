@@ -3,7 +3,7 @@ import {React} from 'react'
 import './App.css'
 import { useLocation, useNavigate } from 'react-router-dom';
 const instaBaseURL = Axios.create({
-  baseURL:'https://cors-anywhere.herokuapp.com/'+'https://api.instagram.com'
+  baseURL:'https://cors-anywhere.herokuapp.com/https://api.instagram.com'
 });
 
 const Token = () => {
