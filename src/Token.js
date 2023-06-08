@@ -32,7 +32,6 @@ const Token = () => {
           "Access-Control-Allow-Credentials":"false",
           "Access-Control-Allow-Origin":'https://api.instagram.com/oauth/access_token',
           'Content-Type': 'multipart/form-data',
-          "Access-Control-Allow-Origin" : "*",
           "Access-Control-Allow-Headers":"*",
           
         },
