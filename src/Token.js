@@ -29,7 +29,8 @@ const Token = () => {
         code:codepara
       }, {
         headers: {
-          "Access-Control-Allow-Origin":`https://api.instagram.com/oauth/access_token`,
+          "Access-Control-Request-Method":POST,
+          "Access-Control-Allow-Origin":"https://insta-basic.vercel.app/"
           
         },
         
