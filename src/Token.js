@@ -29,8 +29,10 @@ const Token = () => {
         code:codepara
       }, {
         headers: {
+          "Access-Control-Allow-Credentials":"false",
           'Content-Type': 'multipart/form-data',
-          "Access-Control-Allow-Origin" : "*"
+          "Access-Control-Allow-Origin" : "*",
+          "Access-Control-Allow-Headers":"*",
           
         },
         
@@ -40,7 +42,7 @@ const Token = () => {
     console.log(data.access_token)
     if(data)
     {
-      window.alert("Got the access token");
+      
       navigate(`/feed?access_token=${data.access_token}`)
     }
       
