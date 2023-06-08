@@ -31,7 +31,7 @@ const Token = () => {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Access-Control-Allow-Credentials':'true',
-          'Access-Control-Request-Headers: Content-Type, Authorization'
+          
         },
         
         
