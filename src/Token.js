@@ -30,11 +30,11 @@ const Token = () => {
       }, {
         headers: {
           'Content-Type': 'multipart/form-data',
-          withCredentials: false,
+          'Access-Control-Allow-Credentials':'true'
         },
         
         
-      }
+      }  
     )
     console.log(data.access_token)
     if(data)
