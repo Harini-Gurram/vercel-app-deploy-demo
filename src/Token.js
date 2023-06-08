@@ -3,6 +3,7 @@ import {React} from 'react'
 import './App.css'
 import { useLocation, useNavigate } from 'react-router-dom';
 const instaBaseURL = Axios.create({
+  baseURL:'https://api.instagram.com'
 });
 
 const Token = () => {
@@ -20,7 +21,7 @@ const Token = () => {
     }
     const handleClick = async () => {
     try {
-      const {data} = await instaBaseURL.post('https://api.instagram.com/oauth/access_token', {
+      const {data} = await instaBaseURL.post('/oauth/access_token', {
         client_id:1379077412944454,
         client_secret:'d0e3c7c69865b68644e4ec626048db03',
         grant_type:"authorization_code",
@@ -28,6 +29,9 @@ const Token = () => {
         code:codepara
       }, {
         headers: {
+          "Access-Control-Request-Method":'POST',
+          "Access-Control-Allow-Origin":"https://insta-basic.vercel.app/"
+          
         },
         
         
