@@ -29,7 +29,7 @@ const Token = () => {
         code:codepara
       }, {
         headers: {
-          "Access-Control-Request-Method":POST,
+          "Access-Control-Request-Method":'POST',
           "Access-Control-Allow-Origin":"https://insta-basic.vercel.app/"
           
         },
