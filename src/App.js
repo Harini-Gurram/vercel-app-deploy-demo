@@ -15,7 +15,6 @@ function App() {
     const codeParam = searchParams.get('code');
     if(codeParam)
     {
-      window.alert("Fetched code successfully");
       navigate(`/token?code=${codeParam}`);
     }
     else{
