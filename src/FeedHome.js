@@ -24,6 +24,7 @@ const FeedHome=()=>{
           .then((resp) => {
             setFeedsData(resp.data.data)
             dispatch(getFields(feeds))
+            console.log(feeds.id)
             nav(`/instaFeed`);
             console.log(feeds.id)
         })
