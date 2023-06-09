@@ -20,6 +20,7 @@ const FeedHome=()=>{
           axios.get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=12&access_token=${access_tok}`)
           .then((resp) => {
             setFeedsData(resp.data.data)
+            nav(`/instaFeed?feeds=${encodeURIComponent(JSON.stringify(resp.data.data))}`);
             console.log(feeds.id)
         })
         
@@ -40,13 +41,13 @@ const FeedHome=()=>{
                         <button className='button' onClick={handleClick}>Get Feed</button>
                         <button className='button' onClick={handleRedirect}>More info</button>
                         </div>
-                        <div className="feed">
+                        {/*<div className="feed">
                         <div className="fcontainer">
             {feeds.map((feed) => (
                 <Feed key={feed.id} feed={feed} />
             ))}
         </div>
-        </div>
+            </div>*/}
                     </div>
                 </div>
             </div>
