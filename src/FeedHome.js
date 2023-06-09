@@ -1,4 +1,4 @@
-import { useLocation} from "react-router-dom";
+import { useLocation, useNavigate} from "react-router-dom";
 import axios from 'axios';
 import {React, useState} from 'react'
 import './App.css'
@@ -7,6 +7,7 @@ import Feed from "./Feed";
 const FeedHome=()=>{
     const [feeds,setFeedsData]=useState([]);
     const location = useLocation();
+    const nav=useNavigate();
     const searchParams = new URLSearchParams(location.search);
     const access_tok = searchParams.get('access_token');
     const handleRedirect=()=>{
