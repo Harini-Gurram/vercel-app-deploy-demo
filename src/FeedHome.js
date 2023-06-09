@@ -1,12 +1,12 @@
 import { useLocation, useNavigate} from "react-router-dom";
 import axios from 'axios';
-import {React, useState} from 'react'
+//import {React, useState} from 'react'
 import './App.css'
 import './FeedHome.css'
 import { useDispatch } from "react-redux";
 import { getFields } from "./feedSlice";
 const FeedHome=()=>{
-    const [feeds,setFeedsData]=useState([]);
+   // const [feeds,setFeedsData]=useState([]);
     const location = useLocation();
     const nav=useNavigate();
     const dispatch=useDispatch();
@@ -22,11 +22,7 @@ const FeedHome=()=>{
         try {
           axios.get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=12&access_token=${access_tok}`)
           .then((resp) => {
-            setFeedsData({
-              feeds:resp.data.data})
-            console.log(feeds.id)
-            dispatch(getFields(feeds))
-            console.log(feeds.id)
+            dispatch(getFields(resp.data))
             nav(`/instaFeed`);
             
         })
