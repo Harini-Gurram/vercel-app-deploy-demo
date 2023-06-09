@@ -22,7 +22,7 @@ const FeedHome=()=>{
         try {
           axios.get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=12&access_token=${access_tok}`)
           .then((resp) => {
-            dispatch(getFields(resp.data))
+            dispatch(getFields(resp.data.data))
             nav(`/instaFeed`);
             
         })
