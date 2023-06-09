@@ -12,4 +12,4 @@ const feedSlice=createSlice({
   }
 })
 export const {getFields}=feedSlice.actions;
-export const {reducerFeed}=feedSlice.reducer;
+export const reducerFeed=feedSlice.reducer;
