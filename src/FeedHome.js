@@ -3,7 +3,6 @@ import axios from 'axios';
 import {React, useState} from 'react'
 import './App.css'
 import './FeedHome.css'
-import Feed from "./Feed";
 const FeedHome=()=>{
     const [feeds,setFeedsData]=useState([]);
     const location = useLocation();
