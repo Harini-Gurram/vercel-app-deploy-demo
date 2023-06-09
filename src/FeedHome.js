@@ -11,7 +11,7 @@ const FeedHome=()=>{
     const nav=useNavigate();
     const dispatch=useDispatch();
     const feedData=useSelector((state)=>state.feedData);
-    console.log(feedData)
+    console.log(feedData.data.id)
     const searchParams = new URLSearchParams(location.search);
     const access_tok = searchParams.get('access_token');
     const handleRedirect=()=>{

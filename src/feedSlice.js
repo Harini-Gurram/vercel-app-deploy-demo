@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState={
-  feedData:[]
+  feedData:{}
 }
 const feedSlice=createSlice({
   name:'feed',
   initialState,
   reducers:{
     getFields:(state,action)=>{
-      state.feedData.push(action.payload)
+      state.feedData=action.payload
     }
   }
 })

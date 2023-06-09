@@ -7,6 +7,7 @@ const InstaFeed=()=>{
     //const searchParams = new URLSearchParams(location.search);
     //const feeds = searchParams.get('feeds');
     const feeds=useSelector((state)=>state.feedData);
+    console.log(feeds.data.id+"  ")
     return(
         <div className="fcontainer">
                         {feeds && feeds.map((feed) => (
