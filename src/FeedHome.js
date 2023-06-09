@@ -3,7 +3,7 @@ import axios from 'axios';
 import {React, useState} from 'react'
 import './App.css'
 import './FeedHome.css'
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getFields } from "./feedSlice";
 const FeedHome=()=>{
     const [feeds,setFeedsData]=useState([]);
