@@ -3,10 +3,14 @@ import axios from 'axios';
 import {React, useState} from 'react'
 import './App.css'
 import './FeedHome.css'
+import { useDispatch, useSelector } from "react-redux";
+import { getFields } from "./feedSlice";
 const FeedHome=()=>{
     const [feeds,setFeedsData]=useState([]);
     const location = useLocation();
     const nav=useNavigate();
+    const dispatch=useDispatch();
+    const feedData=useSelector((state)=>state.feedData);
     const searchParams = new URLSearchParams(location.search);
     const access_tok = searchParams.get('access_token');
     const handleRedirect=()=>{
@@ -20,7 +24,8 @@ const FeedHome=()=>{
           axios.get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=12&access_token=${access_tok}`)
           .then((resp) => {
             setFeedsData(resp.data.data)
-            nav(`/instaFeed?feeds=${encodeURIComponent(JSON.stringify(resp.data.data))}`);
+            dispatch(getFields(feeds))
+            nav(`/instaFeed`);
             console.log(feeds.id)
         })
         

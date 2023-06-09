@@ -6,9 +6,17 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Token from './Token';
 import FeedHome from './FeedHome';
 import InstaFeed from './InstaFeed';
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+import { reducerFeed } from './feedSlice';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+<Provider store={configureStore({
+  reducer:{
+    feedData:reducerFeed
+  }
+})}>
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App/>}/>
@@ -18,6 +26,7 @@ root.render(
 
     </Routes>
   </BrowserRouter>
+  </Provider>
     
   
 );
