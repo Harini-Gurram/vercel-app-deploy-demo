@@ -22,8 +22,6 @@ const Token = () => {
     const handleClick = async () => {
     try {
       const {data} = await instaBaseURL.post('/oauth/access_token', {
-        mode:'cors',
-        "Access-Control-Allow-Origin":"https://insta-basic.vercel.app/",
         client_id:1379077412944454,
         client_secret:'d0e3c7c69865b68644e4ec626048db03',
         grant_type:"authorization_code",
