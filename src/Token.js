@@ -29,7 +29,7 @@ const Token = () => {
         code:codepara
       }, {
         headers: {
-          
+          'Content-Type': 'multipart/form-data'
         },
         
         
