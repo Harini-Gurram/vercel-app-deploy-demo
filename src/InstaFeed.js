@@ -7,7 +7,7 @@ const InstaFeed=()=>{
     const feeds = searchParams.get('feeds');
     return(
         <div className="fcontainer">
-                        {feeds.map((feed) => (
+                        {feeds && feeds.map((feed) => (
                                 <Feed key={feed.id} feed={feed} />
                                  ))}
         </div>
