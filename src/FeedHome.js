@@ -6,7 +6,7 @@ import './FeedHome.css'
 import { useDispatch } from "react-redux";
 import { getFields } from "./feedSlice";
 const FeedHome=()=>{
-    const [feeds,setFeedsData]=useState([]);
+    const [feeds,setFeedsData]=useState({});
     const location = useLocation();
     const nav=useNavigate();
     const dispatch=useDispatch();
@@ -27,7 +27,7 @@ const FeedHome=()=>{
             dispatch(getFields(feeds))
             console.log(feeds.id)
             nav(`/instaFeed`);
-            console.log(feeds.id)
+            
         })
         
         } catch (error) {
