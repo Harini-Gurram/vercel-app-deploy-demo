@@ -6,7 +6,7 @@ import './FeedHome.css'
 import { useDispatch } from "react-redux";
 import { getFields } from "./feedSlice";
 const FeedHome=()=>{
-    const [feeds,setFeedsData]=useState({});
+    const [feeds,setFeedsData]=useState([]);
     const location = useLocation();
     const nav=useNavigate();
     const dispatch=useDispatch();
@@ -22,6 +22,7 @@ const FeedHome=()=>{
         try {
           axios.get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=12&access_token=${access_tok}`)
           .then((resp) => {
+            console.log(JSON.stringify(resp.data.id));
             console.log(resp.data.id);
             setFeedsData(resp.data.data)
             dispatch(getFields(feeds))
