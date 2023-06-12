@@ -4,6 +4,7 @@
 import './InstaFeed.css';
 import { useSelector } from "react-redux";
 import Sidenav from './Navigate';
+import FeedCenter from './components/FeedCenter';
 const InstaFeed=()=>{
     //const location = useLocation();
     //const searchParams = new URLSearchParams(location.search);
@@ -18,7 +19,7 @@ const InstaFeed=()=>{
                 </div>
                 <div style={{ borderLeft: '1px solid black' }}></div>
                 <div className="homepage__timeline">
-                    Feed
+                    <FeedCenter/>
                 </div>
             </div>
             {/*<div className="fcontainer">
