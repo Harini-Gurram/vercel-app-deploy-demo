@@ -36,7 +36,7 @@
 .sidenav .container-nav .button{
     color:white;
 }
-.sidenav .container-nav .button:hover {
+.sidenav .container-nav .icons:hover {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.424);
     border-radius: 5px;
