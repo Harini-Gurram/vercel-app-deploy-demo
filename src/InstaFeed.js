@@ -1,5 +1,5 @@
 //import { useLocation } from "react-router-dom";
-import Feed from "./Feed"
+//import Feed from "./Feed"
 import './FeedHome.css'
 import { useSelector } from "react-redux";
 const InstaFeed=()=>{
