@@ -2,7 +2,7 @@ import React from 'react'
 import "./FeedCenter.css"
 function FeedCenter() {
   return (
-            <div className="homepage">
+            <div className="homepage-feed">
                 <div className="homepage__profile">
                     profile
                 </div>
