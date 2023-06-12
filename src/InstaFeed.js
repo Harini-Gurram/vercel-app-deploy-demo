@@ -15,6 +15,7 @@ const InstaFeed=()=>{
                 <div className="homepage__navWraper">
                     <Sidenav/>
                 </div>
+                <div style={{ borderLeft: '1px solid black' }}></div>;
                 <div className="homepage__timeline">
                     Feed
                 </div>
