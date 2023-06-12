@@ -1,6 +1,7 @@
 //import { useLocation } from "react-router-dom";
 //import Feed from "./Feed"
 //import './FeedHome.css'
+import './InstaFeed.css';
 import { useSelector } from "react-redux";
 import Sidenav from './Navigate';
 const InstaFeed=()=>{
@@ -15,7 +16,7 @@ const InstaFeed=()=>{
                 <div className="homepage__navWraper">
                     <Sidenav/>
                 </div>
-                <div style={{ borderLeft: '1px solid black' }}></div>;
+                <div style={{ borderLeft: '1px solid black' }}></div>
                 <div className="homepage__timeline">
                     Feed
                 </div>
