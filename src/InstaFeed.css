@@ -9,6 +9,7 @@
   }
   
   .homepage__timeline {
+    position: relative;
     flex: 0.8;
   }
   
