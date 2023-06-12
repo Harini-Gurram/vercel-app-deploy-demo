@@ -10,7 +10,7 @@ const InstaFeed=()=>{
     const feeds=useSelector((state)=>state.feedData.feedData);
     console.log(feeds.id+"  ")
     return(
-        <div className="App">
+        <div>
             <div className="homepage">
                 <div className="homepage__navWraper">
                     <Sidenav/>
