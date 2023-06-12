@@ -2,6 +2,7 @@
 //import Feed from "./Feed"
 import './FeedHome.css'
 import { useSelector } from "react-redux";
+import Sidenav from './Navigate';
 const InstaFeed=()=>{
     //const location = useLocation();
     //const searchParams = new URLSearchParams(location.search);
