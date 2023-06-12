@@ -5,7 +5,7 @@
     justify-content: space-between;
     z-index: 1;
   }
-.container{
+.container-nav{
     display: flex;
     flex-direction: column;
     gap:0.5rem;
@@ -43,7 +43,7 @@
     border: none;
   }
 
-.show {
+.show-nav{
     font-size: 18px;
     align-items: center;
     margin-left: 20px;

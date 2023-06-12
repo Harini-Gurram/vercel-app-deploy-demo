@@ -12,34 +12,34 @@ function Sidenav() {
         src="https://www.citypng.com/public/uploads/preview/-11590321744kgx0vygeu0.png"
         alt="Instagram Logo"
       />
-      <div className="container">
+      <div className="container-nav">
         <button className="icons">
           <HomeIcon />
-          <span className="show">Home</span>
+          <span className="show-nav">Home</span>
         </button>
         <button className="icons">
           <Search/>
-          <span className="show">Search</span>
+          <span className="show-nav">Search</span>
         </button>
         <button className="icons">
           <Explore/>
-          <span className="show">Explore</span>
+          <span className="show-nav">Explore</span>
         </button>
         <button className="icons">
           <Slideshow/>
-          <span className="show">Reels</span>
+          <span className="show-nav">Reels</span>
         </button>
         <button className="icons">
           <Chat/>
-          <span className="show">Messages</span>
+          <span className="show-nav">Messages</span>
         </button>
         <button className="icons">
           <FavoriteBorder/>
-          <span className="show">Notifications</span>
+          <span className="show-nav">Notifications</span>
         </button>
         <button className="icons">
           <AddCircleOutline/>
-          <span className="show">Create</span>
+          <span className="show-nav">Create</span>
         </button>
         <button className="icons">
           <Avatar className="avatar"/>
@@ -50,7 +50,7 @@ function Sidenav() {
       <div className="container">
         <button className="icons">
           <Menu/>
-          <span className="show">More</span>
+          <span className="show-nav">More</span>
         </button>
       </div>
     </div>
