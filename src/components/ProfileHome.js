@@ -26,7 +26,9 @@ function ProfileHome() {
                     container
                     style={{ height: '50%' ,marginTop:'4vh',marginLeft:'14vh'}}
                 >
-                    <Avatar className="AvatarStyle" sx={{ width: 140, height: 140}}/>
+                    <Avatar className="AvatarStyle" sx={{ width: 140, height: 140,'&:hover':{
+                        cursor:'pointer'
+                    }}}/>
                 </Grid>
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -36,16 +38,16 @@ function ProfileHome() {
                     >
                         <Stack direction='column' spacing={2.3  }>
                             <Stack direction='row' spacing={3}>
-                                <Typography variant='subtitle1'>sbal_eulaV</Typography>
+                                <Typography variant='subtitle1' sx={{'&:hover':{cursor:'pointer'}}}>sbal_eulaV</Typography>
                                 <StyledButton>
                                     <Typography variant='h6' fontSize={14} >Edit profile</Typography>
                                 </StyledButton>
-                                <Settings height='6vh'/>
+                                <Settings height='6vh' sx={{'&:hover':{cursor:'pointer'}}}/>
                             </Stack>
                             <Stack direction='row' spacing={4} >
                                 <Typography variant='subtitle1'><b>6</b> posts</Typography>
-                                <Typography variant='subtitle1'><b>0</b> followers</Typography>
-                                <Typography variant='subtitle1'><b>0</b> following</Typography>
+                                <Typography variant='subtitle1' sx={{'&:hover':{cursor:'pointer'}}}><b>0</b> followers</Typography>
+                                <Typography variant='subtitle1' sx={{'&:hover':{cursor:'pointer'}}}><b>0</b> following</Typography>
                             </Stack>
                             <Typography variant='h4' fontSize={14} fontWeight='bold'>Sbal_eulaV</Typography>
                         </Stack>
