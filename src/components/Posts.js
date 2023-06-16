@@ -169,6 +169,9 @@ function Display(props){
                     <img
                       className="image"
                       src={item.media_url}
+                      height='164'
+                      width='164'
+                      fit='crop'
                       srcSet={`${item.media_url}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                       alt={item.caption}
                       loading="lazy"
