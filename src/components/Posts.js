@@ -80,7 +80,7 @@ function Posts() {
 
 function Display(props){
     const feeds=useSelector((state)=>state.feedData.feedData);
-    console.log(feeds.map((feed)=>feed.id).join(", "));
+    console.log(feeds.map((feed)=>feed.media_url).join(", "));
     const [hovered, setHovered] = useState(false);
 
     const handleMouseEnter = () => {
