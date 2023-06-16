@@ -1,4 +1,4 @@
-import { ExpandMoreSharp, Favorite, GridOn} from '@mui/icons-material'
+import { Comment, ExpandMoreSharp, Favorite, GridOn} from '@mui/icons-material'
 import { Button, Stack, Typography, buttonClasses, styled,Link,Divider, ImageList, ImageListItem, IconButton} from '@mui/material'
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import AssignmentIndOutlinedIcon from '@mui/icons-material/AssignmentIndOutlined';
@@ -162,7 +162,7 @@ function Display(props){
                 <div>
                     <div style={{marginTop:'1.5rem'}}/> 
                 <ImageList sx={{ width:'100%',height:'100%'}} cols={3}>
-                {feeds.map((item) => (
+                {feeds.map((item,index) => (
                   <ImageListItem key={index} onMouseEnter={()=>handleMouseEnter(index)}
                   onMouseLeave={()=>handleMouseEnter(null)}>
                    
