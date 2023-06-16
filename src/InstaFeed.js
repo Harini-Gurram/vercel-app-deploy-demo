@@ -1,7 +1,6 @@
 //import { useLocation } from "react-router-dom";
 //import Feed from "./Feed"
 //import './FeedHome.css'
-import './InstaFeed.css';
 import { useSelector } from "react-redux";
 import Sidenav from './Navigate';
 import FeedCenter from './components/FeedCenter';
