@@ -20,13 +20,12 @@ const FeedHome=()=>{
       }
     const handleClick = async () => {
         try {
-          axios.get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption,username&limit=12&access_token=${access_tok}`)
+          axios.get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=12&access_token=${access_tok}`)
           .then((resp) => {
             dispatch(getFields(resp.data.data))
             nav(`/instaFeed`);
-           
+            
         })
-        
         
         } catch (error) {
           console.error('Error fetching access token:', error);
