@@ -5,7 +5,8 @@ import Posts from './Posts';
 
 function FeedCenter() {
   return (
-            <Stack direction="column" spacing={2}>
+        
+            <Stack direction="column" spacing={2} marginTop='1px' sx={{height:'100%'}}>
                     <ProfileHome/>
                     <br/>
                     <br/>
