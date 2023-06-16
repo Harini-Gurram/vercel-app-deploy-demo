@@ -12,9 +12,7 @@ const InstaFeed=()=>{
     return(
         <Stack direction='row' spacing={10} divider={<Divider orientation='vertical' flexItem/>}>
             <Sidenav position='fixed' top={1}/>
-            <div style={{height:'calc(100vh-64px)',overflowY:'scroll'}}>
             <FeedCenter/>
-            </div>
         </Stack>    
     )
 }
