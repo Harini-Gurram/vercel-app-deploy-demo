@@ -3,6 +3,7 @@ import { Button, Stack, Typography, buttonClasses, styled,Link,Divider, ImageLis
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import AssignmentIndOutlinedIcon from '@mui/icons-material/AssignmentIndOutlined';
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux';
 const StyledButton=styled(Button)(({theme,isclicked})=>({
     [`&.${buttonClasses.root}`]:{
         variant:'text',
@@ -78,6 +79,8 @@ function Posts() {
 }
 
 function Display(props){
+    const feeds=useSelector((state)=>state.feedData.feedData);
+    console.log(feeds.id+"  ")
     const [hovered, setHovered] = useState(false);
 
     const handleMouseEnter = () => {
