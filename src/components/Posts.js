@@ -167,7 +167,7 @@ function Display(props){
             {props.buttonNumber==="0" && (
                 <div>
                     <div style={{marginTop:'1.5rem'}}/> 
-                <StyledImageList marginLeft={5} sx={{ width:'100%',height:'100%'}} cols={3} >
+                <StyledImageList marginLeft={5} sx={{ width:'80%',height:'100%'}} cols={3} >
                 {feeds.map((item,index) => (
                   <ImageListItem key={index} onMouseEnter={()=>handleMouseEnter(index)}
                   onMouseLeave={()=>handleMouseEnter(null)}>
