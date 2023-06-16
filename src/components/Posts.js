@@ -131,13 +131,13 @@ function Display(props){
                 <div>
                     <div style={{marginTop:'1.5rem'}}/> 
                 <ImageList sx={{ width:'100%',height:'100%'}} cols={3}>
-                {itemData.map((item) => (
-                  <ImageListItem key={item.img} onMouseEnter={handleMouseEnter}
+                {feeds.map((item) => (
+                  <ImageListItem key={item.id} onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}>
                     <img
-                      src={`${item.img}?w=164&h=174&fit=crop&auto=format`}
-                      srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                      alt={item.title}
+                      src={`${item.media_url}?w=164&h=174&fit=crop&auto=format`}
+                      srcSet={`${item.media_url}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                      alt={item.caption}
                       loading="lazy"
                       styles={{'&:hover':{opacity:'0.3'}}}
                     />
