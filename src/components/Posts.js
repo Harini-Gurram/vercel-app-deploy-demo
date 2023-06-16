@@ -135,7 +135,7 @@ function Display(props){
                   <ImageListItem key={item.id} onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}>
                     <img
-                      {/*src={`${item.media_url}?w=264&h=174&fit=crop&auto=format`}*/}
+                      
                       src={item.media_url}
                       srcSet={`${item.media_url}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                       alt={item.caption}
