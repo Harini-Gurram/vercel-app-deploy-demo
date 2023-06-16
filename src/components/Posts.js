@@ -95,6 +95,7 @@ const StyledImageList = styled(ImageList)`
 
   .image:hover {
     filter: blur(2px);
+    cursor:pointer;
   }
 
   .overlay {
@@ -122,6 +123,7 @@ const StyledImageList = styled(ImageList)`
 `;
 function Display(props){
     const feeds=useSelector((state)=>state.feedData.feedData);
+    console.log(feeds.map((feed)=>feed.likes).join(", "))
     const [hovered, setHovered] = useState(null);
 
     const handleMouseEnter = (index) => {
