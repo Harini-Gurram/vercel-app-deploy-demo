@@ -24,7 +24,7 @@ function ProfileHome() {
             <Grid item xs={6} sm={5}>
                 <Grid
                     container
-                    style={{ height: '50%' ,marginTop:'8vh',marginLeft:'14vh'}}
+                    style={{ height: '50%' ,marginTop:'4vh',marginLeft:'14vh'}}
                 >
                     <Avatar className="AvatarStyle" sx={{ width: 140, height: 140}}/>
                 </Grid>
@@ -32,22 +32,22 @@ function ProfileHome() {
             <Grid item xs={12} sm={6}>
                 <Grid 
                     container
-                    sx={{marginTop:'8vh',marginLeft:'0.1vh'}}
+                    sx={{marginTop:'5vh',marginLeft:'0.1vh'}}
                     >
                         <Stack direction='column' spacing={2.3  }>
                             <Stack direction='row' spacing={3}>
-                                <Typography variant='subtitle1'>username</Typography>
+                                <Typography variant='subtitle1'>sbal_eulaV</Typography>
                                 <StyledButton>
-                                    <Typography variant='h6' fontSize={14}>Edit profile</Typography>
+                                    <Typography variant='h6' fontSize={14} >Edit profile</Typography>
                                 </StyledButton>
                                 <Settings height='6vh'/>
                             </Stack>
                             <Stack direction='row' spacing={4} >
-                                <Typography variant='subtitle1'>6 posts</Typography>
-                                <Typography variant='subtitle1'>0 followers</Typography>
-                                <Typography variant='subtitle1'>0 following</Typography>
+                                <Typography variant='subtitle1'><b>6</b> posts</Typography>
+                                <Typography variant='subtitle1'><b>0</b> followers</Typography>
+                                <Typography variant='subtitle1'><b>0</b> following</Typography>
                             </Stack>
-                            <Typography variant='h4' fontSize={14} fontWeight='bold'>Username</Typography>
+                            <Typography variant='h4' fontSize={14} fontWeight='bold'>Sbal_eulaV</Typography>
                         </Stack>
                    
                 </Grid>

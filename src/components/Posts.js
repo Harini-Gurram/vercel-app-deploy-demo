@@ -77,18 +77,49 @@ function Posts() {
     </Stack>
   )
 }
+const StyledImageList = styled(ImageList)`
+  .MuiImageListItem-root {
+    position: relative;
+    overflow: hidden;
+  }
 
+  .image {
+    transition: filter 0.3s ease;
+  }
+
+  .image:hover {
+    filter: blur(2px);
+  }
+
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .MuiImageListItem-root:hover .overlay {
+    opacity: 1;
+  }
+
+  .icon {
+    color: white;
+    font-size: 48px;
+  }
+`;
 function Display(props){
     const feeds=useSelector((state)=>state.feedData.feedData);
-    console.log(feeds.map((feed)=>feed.media_url).join(", "));
-    const [hovered, setHovered] = useState(false);
+    const [hovered, setHovered] = useState(null);
 
-    const handleMouseEnter = () => {
-      setHovered(true);
-    };
-  
-    const handleMouseLeave = () => {
-      setHovered(false);
+    const handleMouseEnter = (index) => {
+      setHovered(index);
     };
     
       const IconContainer = styled('div')({
@@ -132,20 +163,24 @@ function Display(props){
                     <div style={{marginTop:'1.5rem'}}/> 
                 <ImageList sx={{ width:'100%',height:'100%'}} cols={3}>
                 {feeds.map((item) => (
-                  <ImageListItem key={item.id} onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}>
+                  <ImageListItem key={index} onMouseEnter={()=>handleMouseEnter(index)}
+                  onMouseLeave={()=>handleMouseEnter(null)}>
+                   
                     <img
-                      
-                      src={item.media_url}
+                      className="image"
+                      src={`${item.media_url}?w=164&h=164&fit=crop&auto=format`}
                       srcSet={`${item.media_url}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                       alt={item.caption}
                       loading="lazy"
                       styles={{'&:hover':{opacity:'0.3'}}}
                     />
-                     {hovered &&  (
+                     {index===hovered &&  (
                         <IconContainer >
-                           <IconButton sx={{ position: 'absolute', top: '8px', right: '8px' ,color:'white'}}>
-                                <Favorite />
+                           <IconButton className="overlay" sx={{color:'white'}} backgroundColor='transparent'>
+                            <Stack direction="row" spacing={5} backgroundColor='transparent'>
+                                <Favorite/> 0
+                                <Comment/>1
+                            </Stack>
                             </IconButton>
                         </IconContainer> 
                        
