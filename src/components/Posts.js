@@ -123,7 +123,7 @@ const StyledImageList = styled(ImageList)`
 `;
 function Display(props){
     const feeds=useSelector((state)=>state.feedData.feedData);
-    console.log(feeds.map((feed)=>feed.likes).join(", "))
+    console.log(feeds.map((feed)=>feed.like_count).join(", "))
     const [hovered, setHovered] = useState(null);
 
     const handleMouseEnter = (index) => {
