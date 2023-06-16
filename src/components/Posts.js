@@ -168,7 +168,7 @@ function Display(props){
                    
                     <img
                       className="image"
-                      src={`${item.media_url}?w=164&h=164&fit=crop&auto=format`}
+                      src={item.media_url}
                       srcSet={`${item.media_url}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                       alt={item.caption}
                       loading="lazy"
