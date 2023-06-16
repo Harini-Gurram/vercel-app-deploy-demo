@@ -24,8 +24,13 @@ const FeedHome=()=>{
           .then((resp) => {
             dispatch(getFields(resp.data.data))
             nav(`/instaFeed`);
-            
+          axios.get(`https://api.instagram.com/v1/users/{user-id}/?access_token=${access_tok}`) 
+          .then((resp)=>{
+            console.log(resp.data.data.username)
+            console.log(resp.data.username)
+          })
         })
+        
         
         } catch (error) {
           console.error('Error fetching access token:', error);
