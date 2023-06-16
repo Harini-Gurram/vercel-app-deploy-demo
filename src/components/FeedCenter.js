@@ -1,16 +1,18 @@
 import React from 'react'
-import "./FeedCenter.css"
+import ProfileHome from './ProfileHome';
+import {Stack } from '@mui/material';
+import Posts from './Posts';
+
 function FeedCenter() {
   return (
-            <div className="homepage-feed">
-                <div className="homepage__profile">
-                    profile
-                </div>
-                
-                <div className="homepage__posts">
-                    posts
-                </div>
-            </div>
+            <Stack direction="column" spacing={2}>
+                    <ProfileHome/>
+                    <br/>
+                    <br/>
+                    
+                    <Posts/>
+
+            </Stack>
   )
 }
 
