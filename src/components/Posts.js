@@ -163,3 +163,4 @@ function Display(props){
     )
     
 }
+export default Posts;
