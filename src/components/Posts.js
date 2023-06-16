@@ -81,8 +81,15 @@ const StyledImageList = styled(ImageList)`
   .MuiImageListItem-root {
     position: relative;
     overflow: hidden;
+    aspect-ratio:1;
+    height:0;
+    padding-bottom:100%;
   }
-
+  .MuiImageListItem-root img {
+    object-fit:cover;
+    width:100%;
+    height:100%;
+  }
   .image {
     transition: filter 0.3s ease;
   }
