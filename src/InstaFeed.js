@@ -10,10 +10,13 @@ const InstaFeed=()=>{
     //const feeds = searchParams.get('feeds');
     
     return(
-        <Stack direction='row' spacing={10} divider={<Divider orientation='vertical' flexItem/>}>
-            <Sidenav position='fixed' top={1}/>
-            <FeedCenter/>
-        </Stack>    
+        <Stack direction='row' spacing={42} >
+      <Stack position="fixed" direction="row" spacing={8}><Sidenav/> 
+      <Divider orientation='vertical'flexItem/>
+      </Stack>
+      
+      <Stack marginLeft={0}><FeedHome /></Stack>
+  </Stack> 
     )
 }
 export default InstaFeed;

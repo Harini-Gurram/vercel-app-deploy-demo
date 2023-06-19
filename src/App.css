@@ -4,7 +4,6 @@
   background: linear-gradient(135deg,#feda75,#fa7e1e, #d62976,#c988e3,#9ba3ff);
   background-attachment: fixed;
   height: 100vh;
-  display:flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
