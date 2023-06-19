@@ -15,7 +15,7 @@ const InstaFeed=()=>{
             <Divider orientation='vertical'flexItem/>
             </Stack>
       
-            <Stack marginLeft={0}><FeedHome /></Stack>
+            <Stack marginLeft={0}><FeedCenter/></Stack>
         </Stack> 
     )
 }
