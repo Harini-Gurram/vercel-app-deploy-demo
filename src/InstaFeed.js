@@ -11,12 +11,12 @@ const InstaFeed=()=>{
     
     return(
         <Stack direction='row' spacing={42} >
-      <Stack position="fixed" direction="row" spacing={8}><Sidenav/> 
-      <Divider orientation='vertical'flexItem/>
-      </Stack>
+            <Stack position="fixed" direction="row" spacing={8}><Sidenav/> 
+            <Divider orientation='vertical'flexItem/>
+            </Stack>
       
-      <Stack marginLeft={0}><FeedHome /></Stack>
-  </Stack> 
+            <Stack marginLeft={0}><FeedHome /></Stack>
+        </Stack> 
     )
 }
 export default InstaFeed;
