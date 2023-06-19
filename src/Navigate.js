@@ -38,7 +38,7 @@ function Sidenav() {
         margin:" 25px",
         border:' none'}}
         
-        src="https://www.citypng.com/public/uploads/preview/-11590321744kgx0vygeu0.png"
+        src="https://tse2.mm.bing.net/th/id/OIP.w7dyhWvuFT1Ly43XzKcehQHaFD?pid=ImgDet&rs=1"
         alt="Instagram Logo"
         width='125px'
         margin='25px'
